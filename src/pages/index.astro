@@ -17,7 +17,7 @@ const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
 const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
 const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
 
-const MAX_POSTS = 10
+const MAX_POSTS = 3
 const allPosts = await getAllPosts()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
@@ -33,22 +33,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Lorem ipsum dolor</h1>
-				<a
-					href='https://github.com/srleom/astro-theme-resume.git'
-					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-				>
-					<span class='relative flex items-center justify-center'>
-						<span
-							class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-						></span>
-						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-					</span>
-
-					<p class='font-medium'>Get free template</p>
-				</a>
+				<h1 class='text-3xl font-bold'>the home of matt monk</h1>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='Lorem Ipsum'>
+					<Label title='Analyst'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -56,7 +43,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label title='Ipsum'>
+					<Label title='Arizona, USA'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -67,7 +54,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<Label
 						title='Connect on Linkedin'
 						as='a'
-						href='https://www.linkedin.com/in/example/'
+						href='https://www.linkedin.com/in/mattmonk/'
 						target='_blank'
 					>
 						<svg
@@ -86,6 +73,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</section>
 
 		<Section title='About'>
+			<p class="text-muted-foreground">
+				👋 Hi! I'm Matt, a business analyst, curious thinker, tech tinkerer, and builder.
+			</p>
 			<p class='text-muted-foreground'>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis
 				consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum
@@ -95,7 +85,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</Section>
 		{
 			allPostsByDate.length > 0 && (
-				<Section title='Posts'>
+				<Section title='Recent Posts'>
 					<ul class='flex flex-col gap-y-2'>
 						{allPostsByDate.map((p) => (
 							<li class='flex flex-col gap-x-2 sm:flex-row'>
@@ -109,12 +99,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='Experience'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
+				heading='MeridianLink'
+				subheading='Business Analyst II'
+				date='Jul 2021 - Jan 2024'
+				imagePath='/src/assets/meridianlink.png'
+				altText='MeridianLink Logo'
+				imageClass='h-12 w-auto md:-left-28'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
 					<li>
@@ -126,23 +116,31 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				</ul>
 			</Card>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			/>
+				heading='American Honda Finance Corporation'
+				subheading='Business Analyst'
+				date='May 2010 - Jul 2021'
+				imagePath='/src/assets/AHFClogo.png'
+				altText='AHFC Logo'
+				imageClass='h-12 w-auto md:-left-24'
+			>
+			<ul class='ml-4 list-disc text-muted-foreground'>
+				<li>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
+					molestiae laboriosam pariatur!
+
+					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
+				</li>
+			</ul>
+			</Card>
 		</Section>
 
 		<Section title='Education'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
+				heading='University of Houston'
+				subheading='BBA, Finance'
+				imagePath='/src/assets/UHlogo.png'
+				altText='University of Houston Logo'
+				imageClass='h-6 w-auto md:-left-28'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
 					<li>
@@ -153,14 +151,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					</li>
 				</ul>
 			</Card>
-			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			/>
 		</Section>
 
 		<Section title='Projects'>
@@ -187,23 +177,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		<Section title='Certifications'>
 			<Card
 				as='a'
-				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.'
-				date='Mar 2024 - Mar 2024'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
-			/>
-			<Card
-				as='a'
-				heading='Lorem ipsum, dolor sit amet'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.'
-				date='Mar 2029 - Mar 2032'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
+				heading='Certified Cloud Practitioner'
+				subheading='Amazon Web Services'
+				date='Feb 2021 - Jan 2027'
+				imagePath='/src/assets/AWS.png'
+				altText='AWS Logo'
+				imageClass='h-11 w-auto md:-left-24'
+				href='https://aws.amazon.com/certification/certified-cloud-practitioner/'
 			/>
 		</Section>
 
@@ -214,17 +194,4 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<SkillLayout title='Others' skills={others} />
 		</Section>
 	</div>
-	<a
-		href='https://github.com/srleom/astro-theme-resume.git'
-		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-	>
-		<span class='relative flex items-center justify-center'>
-			<span
-				class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-			></span>
-			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-		</span>
-
-		<p class='font-medium'>Get free template</p>
-	</a>
 </PageLayout>
